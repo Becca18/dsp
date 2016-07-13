@@ -64,15 +64,14 @@ chown - change ownership
 ###Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
+`ls` - lists all files and directories in the working directory.  
+`ls -a`  - lists all contents in the working directory, including hidden files and directories.
+`ls -l`  - lists all contents of the working directory in long format.
 `ls -lh`  
 `ls -lah`  
-`ls -t`  
+`ls -t`  - orders files and directories by the time they were last modified.
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
 
 ---
 
