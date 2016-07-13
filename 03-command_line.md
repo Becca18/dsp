@@ -14,9 +14,13 @@ these in a couple of hours.
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
 pwd - print working directory
+
 hostname - my computer's network name
+
 mkdir - make directory
+
 cd - change directory
+
 ls - list directory
 rmdir - remove directory
 pushd - push directory
