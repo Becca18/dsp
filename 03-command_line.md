@@ -85,9 +85,13 @@ What do the following commands do:
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
 '-r' - displays files in reverse order
+
 '-1' - displays each entry on a new line
+
 '-m' - displays the names as a comma-separated list
+
 '-R' - displays subdirectories as well
+
 '-g' - displays long format listing, but excludes owner name
 
 ---
