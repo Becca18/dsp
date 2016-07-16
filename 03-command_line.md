@@ -64,19 +64,19 @@ chown - change ownership
 ###Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls` - lists all files and directories in the working directory.  
+`ls` - lists all contents of the directory you are currently in (working directory).  list directory contents.
 
 `ls -a`  - lists all contents in the working directory, including hidden files and directories.
 
 `ls -l`  - lists all contents of the working directory in long format.
 
-`ls -lh`  
+`ls -lh`  - lists all contents of the working directory in long format and human readable format
 
-`ls -lah`  
+`ls -lah`  -lists all contents of the working directory in long format, including hidden files and directories, and in human readable format.
 
-`ls -t`  - orders files and directories by the time they were last modified.
+`ls -t`  - lists all contents in working directory and orders files and directories by the time they were last modified.
 
-`ls -Glp`  
+`ls -Glp` - lists all contents in working directory, inhibits display of group information, uses long-listing format, and display directories with /
 
 ---
 
@@ -84,7 +84,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+'-r' - displays files in reverse order
+'-1' - displays each entry on a new line
+'-m' - displays the names as a comma-separated list
+'-R' - displays subdirectories as well
+'-g' - displays long format listing, but excludes owner name
 
 ---
 
