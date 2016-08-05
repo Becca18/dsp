@@ -46,7 +46,7 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
-Python 2 because it seems to be the more widely used Python version currently.
+Python 2 because it seems to be the more widely used Python version currently and has more documentation to help me as a beginner.
 
 ###Q2. Which Python Version Installed   
 
