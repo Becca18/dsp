@@ -68,6 +68,6 @@ Vim because it seems easy enough (and kind of fun) to learn. I like the built-in
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+PyCharm because I'm used to using it at this point.  I may also try Sublime. I like the PyCharm will alert me when something doesn't look right. I don't yet know keyboard shortcuts for either. I'm not sure how to customize my editor either.
 
  
