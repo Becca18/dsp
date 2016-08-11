@@ -12,7 +12,10 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+A tuple is a sequence of values. The values can be any type, and they are indexed by integers, so in that respect tuples are a lot like lists. Most list operators work on tuples. The bracket operator indexes an element. The slice operator selects a range of elements. The difference is that tuples are immutable. If you try to modify one of the elements of the tuple, you get an error. You can replace one tuple with another.
+
+Tuples will work as keys in dictionaries because keys must be immutable.
+
 
 ---
 
