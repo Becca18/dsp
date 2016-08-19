@@ -28,11 +28,11 @@ They both contain values.
 
 **Different:**  
 Order—  
-A list keeps order and a set does not. So if you care about order, you should use a list. Also, sets do not support indexing, slicing, or other sequence-like behavior.
+A list keeps order and a set does not. So if you care about order, you should use a list. Also, sets do not support indexing, slicing, or other sequence-like behavior.  
 Hashable—  
-Set requires items to be hashable; list doesn’t. If you have non-hashable items, you must use list.
+Set requires items to be hashable; list doesn’t. If you have non-hashable items, you must use list.  
 Duplicates—  
-Set forbids duplicates and list does not.
+Set forbids duplicates and list does not.  
 Comparing 2 sets —  
 Sets allow you to do operations such as intersection, union, difference, and symmetric difference. 
 
