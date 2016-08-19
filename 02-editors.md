@@ -70,9 +70,9 @@ What graphical editor will you use? How did you make your decision? What are som
 
 **PyCharm** because I'm used to using it at this point.  I may also try Sublime. I like that PyCharm will alert me when something doesn't look right. 
 
-**Useful keyboard shortcuts:**
-Comment or uncomment a line or fragment of code - ⌘/
-Duplicate the current line or selection - ⌘D
+**Useful keyboard shortcuts:**  
+Comment or uncomment a line or fragment of code - ⌘/  
+Duplicate the current line or selection - ⌘D  
 Find/replace text string in the current file - ⌘F/⌘R  
 
-You can customize PyCharm by going to preferences or view.
+You can customize PyCharm by going to Preferences and/or View, depending on what you want to customize exactly.
