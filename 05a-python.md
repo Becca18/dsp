@@ -57,7 +57,7 @@ a - b # Difference
 a ^ b # Symmetric Difference
 {1, 2, 5, 6}
 ```  
-___
+  
 Checking for membership of a value in a set is super fast, while checking for membership in a list takes time proportional to the list’s length in the average and worst cases. So if you have hashable items, don’t care either way about order or duplicates, and want speedy membership checking, set is better than list.
 ---
 
