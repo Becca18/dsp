@@ -13,58 +13,58 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-pwd - print working directory
+pwd - print working directory  
 
-hostname - my computer's network name
+hostname - my computer's network name  
 
-mkdir - make directory
+mkdir - make directory  
 
-cd - change directory
+cd - change directory  
 
-ls - list directory
+ls - list directory  
 
-rmdir - remove directory
+rmdir - remove directory  
 
-pushd - push directory
+pushd - push directory  
 
-popd - pop directory
+popd - pop directory  
 
-cp - copy a file or directory
+cp - copy a file or directory  
 
-mv - move a file or directory
+mv - move a file or directory  
 
-less - page through a file
+less - page through a file  
 
-cat - print the whole file
+cat - print the whole file  
 
-xargs - execute arguments
+xargs - execute arguments  
 
-find - find files
+find - find files  
 
-grep - find things inside files
+grep - find things inside files  
 
-man - read a manual page
+man - read a manual page  
 
-apropos - find what man page is appropriate
+apropos - find what man page is appropriate  
 
-env - look at your environment
+env - look at your environment  
 
-echo - print some arguments
+echo - print some arguments  
 
-export - export/set a new environment variable
+export - export/set a new environment variable  
 
-exit - exit the shell
+exit - exit the shell  
 
-chmod - change permission modifiers
+chmod - change permission modifiers  
 
-chown - change ownership
+chown - change ownership  
 
 ---
 
 ###Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls` - lists all contents of the directory you are currently in (working directory).  list directory contents.
+`ls` - lists all contents of the directory you are currently in (working directory).  list directory contents.  
 
 `ls -a`  - lists all contents in the working directory, including hidden files and directories.
 

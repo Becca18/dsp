@@ -23,38 +23,40 @@ Tuples will work as keys in dictionaries because keys must be immutable.
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
-Similar:
+**Similar:**  
 They both contain values. 
 
-Different:
-Order—
+**Different:**  
+Order—  
 A list keeps order and a set does not. So if you care about order, you should use a list. Also, sets do not support indexing, slicing, or other sequence-like behavior.
-Hashable—
+Hashable—  
 Set requires items to be hashable; list doesn’t. If you have non-hashable items, you must use list.
-Duplicates —
+Duplicates—  
 Set forbids duplicates and list does not.
-Comparing 2 sets —
+Comparing 2 sets —  
 Sets allow you to do operations such as intersection, union, difference, and symmetric difference. 
 
-List:
->>>ways_to_greet = [“Hi”, “Hello”, “Howdy”, “Nice to meet you”, “Wuz up??”]
->>>ways_to_greet[0]
-‘Hi’
+**List:**  
+```python  
+ways_to_greet = [“Hi”, “Hello”, “Howdy”, “Nice to meet you”, “Wuz up??”]
+ways_to_greet[0]
+```
 
-Set:
->>> a = set([1, 2, 3, 4])
->>> b = set([3, 4, 5, 6])
->>> a | b # Union
+**Set:**
+```python
+a = set([1, 2, 3, 4])
+b = set([3, 4, 5, 6])
+a | b # Union
 {1, 2, 3, 4, 5, 6}
->>> a & b # Intersection
+a & b # Intersection
 {3, 4}
->>> a < b # Subset
+a < b # Subset
 False
->>> a - b # Difference
+a - b # Difference
 {1, 2}
->>> a ^ b # Symmetric Difference
+a ^ b # Symmetric Difference
 {1, 2, 5, 6}
-
+```
 Checking for membership of a value in a set is super fast, while checking for membership in a list takes time proportional to the list’s length in the average and worst cases. So if you have hashable items, don’t care either way about order or duplicates, and want speedy membership checking, set is better than list.
 ---
 
@@ -64,6 +66,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Lambda is a fancy word for function that is not bound to a name.  It takes any number of arguments and returns the value of a single expression. It is often used in conjunction with typical functional concepts like filter(), map(), reduce().
 
+```python
 sum = lambda x, y:   x + y
 print sum (7,8)
 foo = [2,18,9,22,17,24,8,12,27]
@@ -73,6 +76,7 @@ print reduce(lambda x, y: x + y, foo)
 
 sorted(['Some', 'words', 'sort', 'differently'], key=lambda word: word.lower())
 ['differently', 'Some', 'sort', 'words']
+```
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
@@ -80,17 +84,18 @@ sorted(['Some', 'words', 'sort', 'differently'], key=lambda word: word.lower())
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
 List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable, or to create a subsequence of those elements that satisfy a certain condition. List comprehensions are essentially a filter followed by a map.
-
+```python
 example_with_map_and_filter = map(lambda n: n*2, filter(lambda n: n %2 == 1, numbers))
 example_with_list_comprehension = [n*2 for n in numbers if n % 2 == 1]
+```
 
-list comprehension formula:
+*list comprehension formula:*
 new_things = [“something with “ + ITEM for ITEM in old_things if condition_based on(ITEM)]
 
-set comprehension:
+*set comprehension:*
 x = {i**2 for i in range(10)}
 
-dictionary comprehension:
+*dictionary comprehension:*
 x = {i:i**2 for i in range(10)}
 
 ---
@@ -123,26 +128,21 @@ date_stop = '14-Jul-2015'
 
 Answer: 7850 days
 
-Place code in this file: [q5_datetime.py](python/q5_datetime.py)
+Place code in this file: [q5_datetime.py](python/q5_datetime.py)  
 Ok done.
 
 ---
 
 ###Q6. Strings
-Edit the 7 functions in [q6_strings.py](python/q6_strings.py)
+Edit the 7 functions in [q6_strings.py](python/q6_strings.py)  
 Ok done.
 
 ---
 
 ###Q7. Lists
-Edit the 5 functions in [q7_lists.py](python/q7_lists.py)
+Edit the 5 functions in [q7_lists.py](python/q7_lists.py)  
 
 ---
 
 ###Q8. Parsing
-Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)
-
-
-
-
-
+Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)  
