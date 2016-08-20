@@ -68,7 +68,7 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
-**PyCharm** because I'm used to using it at this point.  I may also try Sublime. I like that PyCharm will alert me when something doesn't look right. 
+**PyCharm** because I'm used to using it at this point. I like that PyCharm will alert me when something doesn't look right. 
 
 **Useful keyboard shortcuts:**  
 Comment or uncomment a line or fragment of code - ⌘/  

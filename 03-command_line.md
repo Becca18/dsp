@@ -21,7 +21,7 @@ mkdir - make directory
 
 cd - change directory  
 
-ls - list directory  
+ls - list directory contents
 
 rmdir - remove directory  
 
@@ -64,19 +64,19 @@ chown - change ownership
 ###Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls` - lists all contents of the directory you are currently in (working directory).  list directory contents.  
+`ls` - lists current working directory contents.  
 
-`ls -a`  - lists all contents in the working directory, including hidden files and directories.
+`ls -a`  - lists current working directory contents, including hidden files and directories.
 
-`ls -l`  - lists all contents of the working directory in long format.
+`ls -l`  - lists current working directory contents in long format.
 
-`ls -lh`  - lists all contents of the working directory in long format and human readable format
+`ls -lh`  - lists current working directory contents in long format and human readable format.
 
-`ls -lah`  -lists all contents of the working directory in long format, including hidden files and directories, and in human readable format.
+`ls -lah`  -lists current working directory contents in long format, including hidden files and directories, and in human readable format.
 
-`ls -t`  - lists all contents in working directory and orders files and directories by the time they were last modified.
+`ls -t`  - lists current working directory contents and sorts files and directories by the time they were last modified.
 
-`ls -Glp` - lists all contents in working directory, inhibits display of group information, uses long-listing format, and display directories with /
+`ls -Glp` - lists all contents in working directory in long format, inhibits display of group information, and appends indicator (one of /=@|) to entries to denote file-type.
 
 ---
 
@@ -100,10 +100,11 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-'xargs' accepts input from standard input and converts it into an argument list for a specified command.
+‘xargs’ in essence breaks down a list of arguments into sublists small enough to be acceptable on the command line.  
 
-Example:
-find ~ -type f -name 'foo*' -print | xargs ls -l
+Example:  
+This command may fail due to “argument list too long”: rm `find /path -type f 
+However, the following functionally equivalent command using ‘xargs’ will not:
+find /path -type f -print | xargs rm
 
  
-
