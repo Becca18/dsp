@@ -100,11 +100,11 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-‘xargs’ in essence breaks down a list of arguments into sublists small enough to be acceptable on the command line.  
+‘xargs’ in essence breaks down a list of arguments into sublists that are small enough to be acceptable on the command line.  
 
 Example:  
-This command may fail due to “argument list too long”: rm `find /path -type f 
-However, the following functionally equivalent command using ‘xargs’ will not:
+This command may fail due to “argument list too long” if there are too many files in /path: rm `find /path -type f`   
+However, the following functionally equivalent command using ‘xargs’ will work:
 find /path -type f -print | xargs rm
 
  
