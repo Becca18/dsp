@@ -151,7 +151,10 @@ Edit the 7 functions in [q6_strings.py](python/q6_strings.py)
 ###Q7. Lists
 Edit the 5 functions in [q7_lists.py](python/q7_lists.py)  
 *Ok done.*
+
 ---
 
 ###Q8. Parsing
-Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)  
+Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py) 
+*Ok done. Although I don’t see 3 functions to edit in Q8. It asks me to write a program to read a file, manipulate the file and print output.*
+
