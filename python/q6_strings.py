@@ -18,11 +18,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    if count>=10:
+    if count >= 10:
         return "Number of donuts: many"
     else:
-        return "Number of donuts:",str(count)
-
+        return "Number of donuts: %d" % count
 
 def both_ends(s):
     """
@@ -40,11 +39,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    if let(s)<2:
-        print "''"
+    if len(s)<2:
+        return ""
     else:
-        print s[:2]+s[-2:]
-
+        return s[:2]+s[-2:]
 
 def fix_start(s):
     """
@@ -72,7 +70,6 @@ def fix_start(s):
             w.append(letter)
     return x+"".join(w)
 
-
 def mix_up(a, b):
     """
     Given strings a and b, return a single string with a and b
@@ -89,7 +86,6 @@ def mix_up(a, b):
     'fizzy perm'
     """
     return b[0:2]+a[2:], a[0:2]+b[2:]
-
 
 def verbing(s):
     """
@@ -112,7 +108,6 @@ def verbing(s):
             return s+"ing"
     else:
         return s
-
 
 def not_bad(s):
     """
@@ -142,7 +137,6 @@ def not_bad(s):
             return s
     else:
         return s
-
 
 def front_back(a, b):
     """
