@@ -6,7 +6,6 @@ date_stop = '07-28-2015'
 
 from datetime import *
 
-
 date_start = '01-02-2013'
 date_start=datetime.strptime(date_start, '%m-%d-%Y')
 

@@ -12,10 +12,18 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
-A tuple is a sequence of values. The values can be any type, and they are indexed by integers, so in that respect tuples are a lot like lists. Most list operators work on tuples. The bracket operator indexes an element. The slice operator selects a range of elements. The difference is that tuples are immutable. If you try to modify one of the elements of the tuple, you get an error. You can replace one tuple with another.
+**Similarities between Lists and Tuples**  
+- each a sequence of values   
+- the values can be any type  
+- indexed by integers   
+- bracket operator indexes an element
+- slice operator selects a range of elements  
 
-Tuples will work as keys in dictionaries because keys must be immutable.
-
+**Differences between Lists and Tuples**  
+- Tuples are immutable  
+- Lists are mutable  
+  
+Tuples will work as keys in dictionaries because keys must be immutable.  
 
 ---
 
@@ -75,8 +83,8 @@ print filter(lambda x: x %3 ==0, foo)
 print map(lambda x: x * 2 + 10, foo)
 print reduce(lambda x, y: x + y, foo)
 
-sorted(['Some', 'words', 'sort', 'differently'], key=lambda word: word.lower())
-['differently', 'Some', 'sort', 'words']
+sorted([‘Hello’, 'weigh’, 'sort', ‘cat’], key=lambda word: word.lower())
+[‘cat’, ‘Hello’, 'sort', 'weigh’]
 ```
 ---
 
@@ -130,19 +138,19 @@ date_stop = '14-Jul-2015'
 Answer: 7850 days
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)  
-Ok done.
+*Ok done.*
 
 ---
 
 ###Q6. Strings
 Edit the 7 functions in [q6_strings.py](python/q6_strings.py)  
-Ok done.
+*Ok done.*
 
 ---
 
 ###Q7. Lists
 Edit the 5 functions in [q7_lists.py](python/q7_lists.py)  
-
+*Ok done.*
 ---
 
 ###Q8. Parsing
