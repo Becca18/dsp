@@ -129,6 +129,7 @@ def unique_email_domains_with_regex():
     for i in email_domains:
         p.append(i[1])
 
+
     email_domains_list=sorted(p)
     i = 1
     n = len(email_domains_list)
@@ -139,5 +140,12 @@ def unique_email_domains_with_regex():
         else:
             i += 1
     return email_domains_list
+
+def number_email_domains():
+    count=0
+    for i in unique_email_domains_with_regex():
+        count+=1
+    return "There are %d different unique email domains." % count
+print number_email_domains()
 
 print unique_email_domains_with_regex()
