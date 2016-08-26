@@ -70,7 +70,7 @@ print different_titles()
 
 
 def titles_faculty_frequency():
-    #Find degree frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
+    #Find title frequencies
 
     titles_dictionary = {}
     for i in titles_in_list_func():
@@ -84,3 +84,60 @@ def titles_faculty_frequency():
     return titles_tuples
 
 print titles_faculty_frequency()
+
+def email_addresses_find():
+    import csv
+    f = open("faculty.csv")
+    csv_f = csv.reader(f)
+
+    emails_in_list=[]
+    for i in csv_f:
+        emails_in_list.append(i[3])
+    emails_in_list.pop(0)
+
+    return emails_in_list
+
+print email_addresses_find()
+
+def email_addresses_find_with_regex():
+    import csv
+
+    with open("faculty.csv") as f:
+        t=list(csv.reader(f))
+    y = [val for sublist in t for val in sublist]
+    z=" ".join(y)
+
+    import re
+    emails = re.findall(r'[\w\.-]+@[\w\.-]+', z)
+
+    return emails
+
+print email_addresses_find_with_regex()
+
+def unique_email_domains_with_regex():
+    import csv
+
+    with open("faculty.csv") as f:
+        t=list(csv.reader(f))
+    y = [val for sublist in t for val in sublist]
+    z=" ".join(y)
+
+    import re
+    email_domains = re.findall(r'([\w\.-]+)@([\w\.-]+)', z)
+
+    p=[]
+    for i in email_domains:
+        p.append(i[1])
+
+    email_domains_list=sorted(p)
+    i = 1
+    n = len(email_domains_list)
+    while i < n:
+        if email_domains_list[i] == email_domains_list[i - 1]:
+            del email_domains_list[i]
+            n -= 1
+        else:
+            i += 1
+    return email_domains_list
+
+print unique_email_domains_with_regex()
