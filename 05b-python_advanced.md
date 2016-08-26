@@ -22,14 +22,14 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 There are **8** different degrees.  
 
 **Frequencies:**    
-BSED: 1  
+BSEd: 1  
 JD: 1  
 MA: 1  
 MD: 1   
 MPH: 2   
 MS: 2   
-PHD: 31  
-SCD: 6  
+PhD: 31  
+ScD: 6  
 
   
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
@@ -37,10 +37,10 @@ SCD: 6
 There are **4** different titles.  
 
 **Frequencies:**  
-ASSISTANT PROFESSOR IS BIOSTATISTICS: 1  
-ASSISTANT PROFESSOR OF BIOSTATISTICS: 11  
-ASSOCIATE PROFESSOR OF BIOSTATISTICS: 12  
-PROFESSOR OF BIOSTATISTICS: 13  
+Assistant Professor is Biostatistics: 1  
+Assistant Professor of Biostatistics: 11  
+Associate Professor of Biostatistics: 12  
+Professor of Biostatistics: 13  
 
 *Note: It looks like there is a typo in one of the title names.  I wasn’t sure if this was on purpose or not and it should be “in” or whether we are supposed to change “is” to “of”. I just left it alone.*
 
