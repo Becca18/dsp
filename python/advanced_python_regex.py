@@ -85,6 +85,8 @@ def titles_faculty_frequency():
 
 print titles_faculty_frequency()
 
+#I found the email addresses in 2 different ways.
+
 def email_addresses_find():
     import csv
     f = open("faculty.csv")
