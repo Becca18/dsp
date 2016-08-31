@@ -137,8 +137,7 @@ Print the first 3 key and value pairs of the dictionary:
 ('Rui', 'Xiao') [' PhD', 'Assistant Professor', 'rxiao@mail.med.upenn.edu']
 ('Sharon', 'Xie') [' Ph.D.', 'Associate Professor', 'sxie@mail.med.upenn.edu']
 ('Dawei', 'Xie') [' PhD', 'Assistant Professor', 'dxie@upenn.edu']
-('Wei', 'Yang') [' Ph.D.', 'Assistant Professor', 'weiyang@mail.med.upenn.edu']
-
+('Wei', 'Yang') [' Ph.D.', 'Assistant Professor', 'weiyang@mail.med.upenn.edu']  
 
 Place your code in this file: [advanced_python_dict.py](python/advanced_python_dict.py)
 *Ok done.*  
