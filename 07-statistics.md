@@ -54,7 +54,7 @@ Cohen's D is an example of effect size.  Other examples of effect size are:  cor
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
 
 Python code:  
-#investigation of whether first babies are lighter or heavier than others via Cohen's d
+
 ```
 import nsfg
 preg = nsfg.ReadFemPreg()
@@ -130,6 +130,10 @@ print biased_pmf.Mean()
 
 Result:  
 [Children in Household PMF](https://github.com/Becca18/dsp/blob/master/img/children_in_household.png)
+[<img src="img/children_in_household.jpg" title=“Children in House”/>](https://github.com/Becca18/dsp/blob/master/img/children_in_household.png)
+
+The mean of the actual distribution of the number of children under 18 in the household is 1.02.
+The mean of the biased distribution of the number of children under 18 in the household is 2.40.
 
 ###Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
