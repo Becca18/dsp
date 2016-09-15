@@ -265,7 +265,8 @@ Frequentist inference:
 - dominated statistical practice during the 20th century
 - tends to be less computationally intensive
 
-In the current era of powerful computers and big data, Bayesian methods have undergone a resurgence in fields like machine learning and genetics.  Divisions remain, but the consensus forming is that the most effective approaches to complex problems often draw on the best insights from both schools working together.
+In the current era of powerful computers and big data, Bayesian methods have undergone a resurgence in fields like machine learning and genetics.  Divisions remain, but the consensus forming is that the most effective approaches to complex problems often draw on the best insights from both schools working together.  
+
 ---
 
 ###Optional Exercises
