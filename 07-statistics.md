@@ -249,8 +249,23 @@ The probability that Elvis was an identical twin given the above information is 
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Both approaches permit one to evaluate evidence about competing hypotheses. 
 
+Bayesian inference:  
+- uses probabilities for both hypotheses and data 
+- depends on the prior and likelihood of observed data
+- requires one to know or construct a subjective prior 
+- dominated statistical practice before the 20th century
+- may be more computationally intensive
+
+Frequentist inference:
+- never uses or gives the probability of a hypothesis (no prior or posterior)
+- depends on the likelihood for both observed and unobserved data
+- does not require a prior
+- dominated statistical practice during the 20th century
+- tends to be less computationally intensive
+
+In the current era of powerful computers and big data, Bayesian methods have undergone a resurgence in fields like machine learning and genetics.  Divisions remain, but the consensus forming is that the most effective approaches to complex problems often draw on the best insights from both schools working together.
 ---
 
 ###Optional Exercises
