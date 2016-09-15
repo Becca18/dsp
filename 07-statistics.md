@@ -87,12 +87,7 @@ import chap01soln
 resp = chap01soln.ReadFemResp()
 
 import thinkstats2
-pmf = thinkstats2.Pmf(resp.numkdhh)
-
-import thinkplot
-thinkplot.Pmf(pmf, label='numkdhh')
-thinkplot.Show()
-
+pmf = thinkstats2.Pmf(resp.numkdhh, label='actual')
 
 def BiasPmf(pmf, label=''):
     """Returns the Pmf with oversampling proportional to value.
@@ -118,9 +113,10 @@ def BiasPmf(pmf, label=''):
     new_pmf.Normalize()
     return new_pmf
 
-biased_pmf = BiasPmf(pmf, label='observed')
-thinkplot.PrePlot(2)
+biased_pmf = BiasPmf(pmf, label='biased')
 
+import thinkplot
+thinkplot.PrePlot(2)
 thinkplot.Pmfs([pmf, biased_pmf])
 thinkplot.Show(xlabel='children in household', ylabel='PMF')
 
@@ -130,7 +126,6 @@ print biased_pmf.Mean()
 
 Result:  
 [Children in Household PMF](https://github.com/Becca18/dsp/blob/master/img/children_in_household.png)
-[<img src="img/children_in_household.jpg" title=“Children in House”/>](https://github.com/Becca18/dsp/blob/master/img/children_in_household.png)
 
 The mean of the actual distribution of the number of children under 18 in the household is 1.02.
 The mean of the biased distribution of the number of children under 18 in the household is 2.40.
@@ -138,10 +133,44 @@ The mean of the biased distribution of the number of children under 18 in the ho
 ###Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
+Code:  
+
+```
+import random
+sample = []
+for i in range(0,1000):
+    sample.append(random.random())
+
+import thinkstats2
+pmf = thinkstats2.Pmf(sample)
+cdf = thinkstats2.Cdf(sample)
+
+import thinkplot
+thinkplot.Pmf(pmf, label='PMF')
+thinkplot.Show(xlabel='Random Number between 0 and 1', ylabel='PMF')
+
+thinkplot.Cdf(cdf, label='CDF')
+thinkplot.Show(xlabel='Random Number between 0 and 1', ylabel='CDF')
+```
+Result:  
+Yes, the function produces random numbers - the distribution is shown to be uniform in the PMF plot and the CDF plot.
+
+
 ###Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
 This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
 
+Code:  
+```
+#5'10" = 70" = 177.8cm
+#6'1" = 73" = 185.42cm
 
+import scipy.stats
+Blue_man_range = scipy.stats.norm.cdf(185.42, loc=178, scale=7.7)-scipy.stats.norm.cdf(177.8, loc=178, scale=7.7)
+print Blue_man_range
+```
+
+Result:  
+34.27% of the U.S. male population is in the Blue Man Group height range.  
 
 ###Q5. Bayesian (Elvis Presley twin) 
 
@@ -149,7 +178,71 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Code:  
+
+```
+from thinkbayes import Pmf
+from fractions import Fraction
+
+#first way to code this problem
+pmf = Pmf()
+
+pmf.Set('Identical', Fraction(1, 300))
+pmf.Set('Fraternal', Fraction(1, 125))
+
+pmf.Mult('Identical', 1)
+pmf.Mult('Fraternal', .5)
+
+pmf.Normalize()
+
+print pmf.Prob("Identical")
+
+#second way to code this problem
+class Elvis(Pmf):
+
+    def __init__(self, hypos):
+        Pmf.__init__(self)
+        for hypo in hypos:
+            if hypo == "Identical":
+                self.Set(hypo, Fraction(1, 300))
+            if hypo == "Fraternal":
+                self.Set(hypo, Fraction(1, 125))
+        self.Normalize()
+
+    def Update(self, data):
+
+        for hypo in self.Values():
+            like = self.Likelihood(data, hypo)
+            self.Mult(hypo, like)
+        self.Normalize()
+
+    mixes = {
+        'Identical':dict(boy=1, girl=0),
+        'Fraternal':dict(boy=0.5, girl=0.5),
+        }
+
+    def Likelihood(self, data, hypo):
+        mix = self.mixes[hypo]
+        like = mix[data]
+        return like
+
+
+def main():
+    hypos = ['Identical', 'Fraternal']
+
+    pmf = Elvis(hypos)
+
+    pmf.Update('boy')
+
+    for hypo, prob in pmf.Items():
+        print hypo, prob
+
+
+if __name__ == '__main__':
+    main()
+```
+Result:  
+The probability that Elvis was an identical twin given the above information is 45.45%.  
 
 ---
 
