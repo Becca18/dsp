@@ -28,6 +28,11 @@ def linear_algebra():
     print add_matrix2("C", "D", C, D)
     print matrix_mult("B", "A", B, A)
     print matrix_mult2("B", "A", B, A)
+    print matrix_mult3("B", "C", B, C)
+    print matrix_mult4("C", "B", C, B)
+    print matrix_power("B", "4", B, 4)
+    print matrix_mult5("A", "A", A, A)
+    print matrix_mult6("D", "D", D, D)
 
 def matrix_dim(s,x):
 
@@ -131,9 +136,57 @@ def matrix_mult2(t,z,x,y):
     except ValueError:
         return "The product of " + str(t) + " and " + str(z) + " transpose is: not defined"
 
+def matrix_mult3(t,z,x,y):
+    import numpy as np
+    try:
+        result = np.dot(x,y)
+        result = str(result)
+        return "The product of " + str(t) + " and " + str(z) + " is: %s" %result
+
+    except ValueError:
+        return "The product of " + str(t) + " and " + str(z) + " is: not defined"
+
+def matrix_mult4(t,z,x,y):
+    import numpy as np
+    try:
+        result = np.dot(x,y)
+        result = str(result)
+        return "The product of " + str(t) + " and " + str(z) + " is: %s" %result
+
+    except ValueError:
+        return "The product of " + str(t) + " and " + str(z) + " is: not defined"
+
+def matrix_power(t,z, M,n):
+    import numpy as np
+    try:
+        result = np.linalg.matrix_power(M,n)
+        result = str(result)
+        return "The result of " + str(t) + " raised to the " + str(z) + "th power is: %s" %result
+
+    except ValueError:
+        return "The result of " + str(t) + " raised to the " + str(z) + "th power is: not defined"
+
+def matrix_mult5(t,z,x,y):
+    import numpy as np
+    try:
+        result = np.dot(x,np.matrix.transpose(y))
+        result = str(result)
+        return "The product of " + str(t) + " and " + str(z) + " transpose is: %s" %result
+
+    except ValueError:
+        return "The product of " + str(t) + " and " + str(z) + " transpose is: not defined"
+
+def matrix_mult6(t,z,x,y):
+    import numpy as np
+    try:
+        result = np.dot(np.matrix.transpose(x),y)
+        result = str(result)
+        return "The product of " + str(t) + " transpose and " + str(z) + " is: %s" %result
+
+    except ValueError:
+        return "The product of " + str(t) + " transpose and " + str(z) + " is: not defined"
+
 linear_algebra()
-
-
 
 """
 A Dimensions: 2x3
@@ -155,4 +208,15 @@ The addition of C transpose and D scaled by 3  is: [[ 14.   3.   3.]
 The product of B and A is: [[-1. -5. -1.]
  [ 2.  7.  4.]]
 The product of B and A transpose is: not defined
+The product of B and C is: not defined
+The product of C and B is: [[ 5. -6.]
+ [ 9. -8.]
+ [ 6. -6.]]
+The result of B raised to the 4th power is: [[ 1. -4.]
+ [ 0.  1.]]
+The product of A and A transpose is: [[ 14.  28.]
+ [ 28.  69.]]
+The product of D transpose and D is: [[ 10.  -4.   0.]
+ [ -4.   8.   8.]
+ [  0.   8.  10.]]
 """
